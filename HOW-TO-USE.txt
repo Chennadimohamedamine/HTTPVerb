@@ -7,3 +7,25 @@ sudo chmod +x /usr/local/bin/httpverb
 
 # Then use it from anywhere
 httpverb -d example.com
+httpverb -f domains.txt
+
+# CSV export for the resulte
+httpverb -d example.com -c
+
+Example 1: Quick Single Domain Scan
+httpverb -d example.com
+```
+**Output:**
+```
+═══════════════════════════════════════════════════
+          HTTPVerb - Method Enumeration Tool
+                    Version 1.0
+═══════════════════════════════════════════════════
+
+╔════════════════════════════════════════════════════════════╗
+║ Testing: https://example.com
+╚════════════════════════════════════════════════════════════╝
+  [GET] Status: 200 | Allowed | Time: 0.234s
+  [POST] Status: 405 | Not Allowed | Time: 0.189s
+  [PUT] Status: 405 | Not Allowed | Time: 0.192s
+  ...
